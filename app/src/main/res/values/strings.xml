@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Moustache</string>
+    <string name="app_name_pro">Moustache ++</string>
+    <string name="app_name_no_ads">Moustache Ad Free</string>
+    <string name="stealth_call_start">Stealth Call Start</string>
+
+    <string name="contactName">Name</string>
+    <string name="strUnknownCaller">Unknown Caller </string>
+    <string name="unknown">Unknown</string>
+    <string name="vibrate">Vibrate</string>
+
+    <!--main screen button strings-->
+    <string name="strStart">Start</string>
+    <string name="strSelectContact">Contact</string>
+    <string name="strSelectRingtone">Ringtone</string>
+
+    <!--Main screen image strings-->
+    <string name="unknown_contact_image_text">Press to\nSelect\nContact</string>
+    <string name="incoming_call">Incoming Call</string>
+
+    <string name="edit_text_hint">Type name</string>
+    <string name="number_hint"> -</string>
+
+    <!--Settings strings-->
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share With Friends</string>
+    <string name="action_rate">Rate App</string>
+    <string name="action_feedback">Send Feedback</string>
+
+    <string name="logcall">Log Call</string>
+
+    <!-- Share Strings -->
+    <string name="pref_share_setting">Share Options</string>
+    <string name="share_settings_summary">Sharing is caring.</string>
+
+    <string name="shareChooserTitle">Share via</string>
+    <string name="strShareSubject">Moustache&#8230; when you really must dash</string>
+    <string name="strShareBody">Moustache, the Stealth Fake Caller. Pick a contact, ringtone and time for your next excuse\n</string>
+    <string name="strShareDownloadMsg">Download now:</string>
+    <string name="strShareDownloadLink">http://market.android.com/details?id=</string>
+
+    <!-- Feedback Strings-->
+    <string name="feedbackSubject">Moustache Suggestion</string>
+    <string name="feedbackBody">Hi,\nI have a suggestion....</string>
+    <string name="feedbackChooserTitle">Send Feedback Via</string>
+    <string name="feedback_settings_summary">New features you\'d like to see?</string>
+    <string name="rate_settings_summary">Would be appreciated if you could add some stars</string>
+
+    <!-- Settings Strings -->
+    <string name="pref_user_profile">User Settings</string>
+    <string name="pref_upgrade_setting">Upgrade</string>
+
+    <string name="action_howto">How To</string>
+
+    <string name="reset_settings_summary">Restore default state.</string>
+    <string name="log_settings_summary">Add record to the call log.</string>
+    <string name="not_implemented">Not implemented</string>
+    <string name="end_call">End Call</string>
+    <string name="upgrade_summary">No adverts and the small fee will allow me to keep adding new features</string>
+    <string name="action_upgrade">Upgrade</string>
+    <string name="stealth_mode_summary">Disable launch from lock screen</string>
+    <string name="action_stealth_mode">Disable Stealth Mode</string>
+
+    <string name="action_update">Update</string>
+    <string name="update_summary">Check for Update</string>
+
+
+    <string name="help_info">Quick Help</string>
+    <string name="help_info_dialog_text">PlaceHolder - embedded in code</string>
+
+    <string name="remove_free_title">Remove Free Version</string>
+
+
+    <string name="advert_info">Advert Information</string>
+    <string name="advert_info_dialog_text">PlaceHolder - embedded in code</string>
+    <string name="dialog_btn_dismiss">DISMISS</string>
+    <string name="dialog_btn_sure">SURE</string>
+
+    <string name="strRateResultNegative">Awwwww… another time maybe</string>
+    <string name="strRateResultPositive">Thank you, it\'s much appreciate</string>
+    <string name="action_reset">Reset Settings</string>
+
+    <!-- Advert Banner ID's - Live versions  -->
+    <integer name="advertCountInter">5</integer>
+    <integer name="advertCountBanner">5</integer>
+    <!-- Advert Banner ID's - Release versions -->
+    <string name="banner_ad_top_id">ca-app-pub-5422652884044656/7923643525</string>
+    <string name="banner_ad_bottom_id">ca-app-pub-5422652884044656/3353843125</string>
+    <string name="image_ad_bot_id">ca-app-pub-5422652884044656/1099989926</string>
+    <string name="interstitial_advert">ca-app-pub-5422652884044656/2016710722</string>
+    <!-- Advert Banner ID's - Test versions -->
+    <!--
+    <string name="banner_ad_top_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_bottom_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="image_ad_bot_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_advert">ca-app-pub-3940256099942544/1033173712</string>
+-->
+    <!--My handset id-->
+    <string name="MyHandset">A7CD28D7735B61259EB6CA44FD08DB24</string>
+
+</resources>

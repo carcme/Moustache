@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_user_profile">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_phone_missed_red_900_36dp"
+            android:key="log"
+            android:summary="@string/log_settings_summary"
+            android:title="@string/logcall">
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_security_yellow_a700_36dp"
+            android:key="stealthmode"
+            android:summary="@string/stealth_mode_summary"
+            android:title="@string/action_stealth_mode">
+        </CheckBoxPreference>
+
+        <Preference
+            android:icon="@drawable/ic_refresh_blue_900_36dp"
+            android:key="reset"
+            android:summary="@string/reset_settings_summary"
+            android:title="@string/action_reset">
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_share_setting">
+
+        <Preference
+            android:icon="@drawable/ic_share_teal_700_36dp"
+            android:key="share"
+            android:summary="@string/share_settings_summary"
+            android:title="@string/action_share">
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_star_rate_orange_800_36dp"
+            android:key="rate"
+            android:summary="@string/rate_settings_summary"
+            android:title="@string/action_rate">
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_email_green_800_36dp"
+            android:key="feedback"
+            android:summary="@string/feedback_settings_summary"
+            android:title="@string/action_feedback">
+        </Preference>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_upgrade_setting" android:key="upgradeCategory">
+        <Preference
+            android:icon="@drawable/ic_shopping_cart_blue_grey_700_36dp"
+            android:key="upgrade"
+            android:summary="@string/upgrade_summary"
+            android:title="@string/action_upgrade">
+        </Preference>
+<!--        <Preference
+            android:key="update"
+            android:summary="@string/update_summary"
+            android:title="@string/action_update">
+        </Preference>
+-->
+    </PreferenceCategory>
+
+</PreferenceScreen>

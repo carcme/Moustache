@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    tools:context=".Moustache">
+
+    <RelativeLayout
+        android:id="@+id/baseView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/adTopLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="top"
+                android:layout_gravity="top"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_top_id"
+                >
+            </com.google.android.gms.ads.AdView>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/adTopLayout"
+            android:layout_marginBottom="1dp"
+            android:background="#1f000000"
+            />
+
+        <RelativeLayout
+            android:id="@+id/myContactLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/separator"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ImageButton
+                android:id="@+id/imgBtn_SelectedImage"
+                android:contentDescription="@string/strSelectContact"
+                android:src="@drawable/icon_user_default_scaled"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:adjustViewBounds="false"
+
+                android:scaleType="fitCenter"
+                android:layout_alignBottom="@+id/imgBtnMusic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:maxWidth="150dp"
+                android:minHeight="170dp"
+                />
+
+            <TextView
+                android:id="@+id/imageHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imgBtn_SelectedImage"
+                android:layout_alignTop="@+id/imgBtn_SelectedImage"
+                android:layout_alignRight="@+id/imgBtn_SelectedImage"
+                android:layout_alignBottom="@+id/imgBtn_SelectedImage"
+                android:layout_margin="30dp"
+                android:gravity="top|center"
+                android:text="@string/unknown_contact_image_text"
+                android:textColor="#e9e9e9"
+                />
+
+            <com.meyerlaurent.cactv.AutoCompleteContactTextView
+                android:id="@+id/textView_SelectedName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_text_hint"
+                android:singleLine="true"
+                auto:typedLettersHaveDifferentStyle="true"
+                auto:styleOfTypedLetters="bold"
+                auto:displayPhotoIfAvailable="true"
+                auto:typeOfData="phone"
+                android:paddingLeft="0dp"
+                android:paddingRight="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imgBtn_SelectedImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <TextView
+                android:id="@+id/textView_SelectedNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:hint="@string/number_hint"
+                android:ems="15"
+                android:singleLine="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:layout_below="@+id/textView_SelectedName"
+                android:layout_toRightOf="@+id/imgBtn_SelectedImage"
+                />
+
+            <CheckBox
+                android:id="@+id/ckbVibrate"
+                android:text="@string/vibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_below="@+id/textView_SelectedNumber"
+                android:layout_toRightOf="@+id/imgBtn_SelectedImage"
+                android:layout_toEndOf="@+id/imgBtn_SelectedImage"/>
+
+            <me.carc.moustache.helpers.Spinner2
+                android:id="@+id/spinner_time"
+                style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/colorPrimaryDark"
+                android:entries="@array/entries_update_intervals"
+                android:layout_alignTop="@+id/ckbVibrate"
+                android:layout_alignRight="@+id/textView_SelectedNumber"
+                android:layout_alignEnd="@+id/textView_SelectedNumber"
+                android:layout_alignBottom="@+id/ckbVibrate"
+                android:layout_toRightOf="@+id/ckbVibrate"
+                android:layout_toEndOf="@+id/ckbVibrate"/>
+
+            <ImageButton
+                android:id="@+id/imgBtnCall"
+                android:src="@drawable/ic_call_primary_36dp"
+                android:contentDescription="@string/strStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_time"
+                android:layout_alignLeft="@+id/spinner_time"
+                android:layout_alignStart="@+id/spinner_time"
+                android:layout_alignRight="@+id/spinner_time"
+                android:layout_alignEnd="@+id/spinner_time"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtnMusic"
+                android:contentDescription="@string/strSelectRingtone"
+                android:src="@drawable/ic_library_music_primary_36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ckbVibrate"
+                android:layout_toRightOf="@+id/imgBtn_SelectedImage"
+                android:layout_alignRight="@+id/ckbVibrate"
+                android:layout_alignEnd="@+id/ckbVibrate"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+        </RelativeLayout>
+
+       <RelativeLayout
+            android:id="@+id/adBotLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone"
+            >
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                ads:adSize="LARGE_BANNER"
+                ads:adUnitId="@string/image_ad_bot_id"
+                android:gravity="end"
+                android:layout_gravity="bottom"
+                android:animateLayoutChanges="true"
+                android:layoutAnimation="@anim/anim_controller"
+                >
+            </com.google.android.gms.ads.AdView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/PrimaryTextColor"
+            android:background="#7B1FA2"
+            android:text="@string/incoming_call"
+            android:id="@+id/tvIncomingCallText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/contactInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strUnknownCaller"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+            android:background="#7B1FA2"
+            android:textColor="@color/PrimaryTextColor"
+            android:textSize="@dimen/_30sdp"
+            android:gravity="top"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/tvIncomingCallText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:id="@+id/contact_image"
+            android:contentDescription="@string/unknown_contact_image_text"
+            android:layout_width="@dimen/unknown_image_width"
+            android:layout_height="@dimen/unknown_image_heigth"
+            android:maxWidth="@dimen/unknown_image_width"
+            android:maxHeight="@dimen/unknown_image_heigth"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_user_alpha"
+
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_below="@+id/imageViewControls"
+            android:layout_centerHorizontal="true"/>
+
+        <net.frakbot.glowpadbackport.GlowPadView
+            android:id="@+id/incomingCallWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+
+            app:feedbackCount="1"
+
+            app:glowRadius ="@dimen/glowpadview_glow_radius"
+            app:innerRadius="@dimen/glowpadview_inner_radius"
+            app:outerRadius="@dimen/glowpadview_target_placement_radius"
+            app:snapMargin ="@dimen/glowpadview_snap_margin"
+
+            app:targetDrawables="@array/incoming_call_widget_2way_targets"
+
+            app:handleDrawable="@drawable/ic_in_call_touch_handle"
+            app:outerRingDrawable="@drawable/ic_lockscreen_outerring"
+            app:pointDrawable="@drawable/ic_lockscreen_glowdot"
+            app:vibrationDuration="20"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvContols"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tvContols"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="#7B1FA2"
+            android:foreground="#7B1FA2"
+            android:layout_below="@+id/contactInfo"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/contact_image"
+            android:layout_alignParentEnd="true"/>
+
+        <android.support.v7.widget.ButtonBarLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactInfo"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageViewControls">
+
+            <ImageButton
+                android:id="@+id/btnVol"
+                android:contentDescription="@string/not_implemented"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+
+                android:layout_toEndOf="@+id/btnMic"
+                android:src="@drawable/ic_volume_up_24dp"
+                />
+
+            <ImageButton
+                android:id="@+id/btnMic"
+                android:contentDescription="@string/not_implemented"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_mic_off_24dp"
+                />
+
+            <ImageButton
+                android:id="@+id/btnDialPad"
+                android:contentDescription="@string/not_implemented"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btnVol"
+                android:src="@drawable/ic_dialpad_24dp"
+                />
+
+            <ImageButton
+                android:id="@+id/btnPause"
+                android:contentDescription="@string/not_implemented"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@+id/btnDialPad"
+                android:src="@drawable/ic_pause_circle_24dp"
+                />
+
+        </android.support.v7.widget.ButtonBarLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_call"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@color/PrimaryTextColor"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
