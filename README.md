@@ -13,10 +13,8 @@ Also a feature to start a call from the lock screen but that still needs some wo
 
 
 
+#More Information:
+  https://carcmedev.github.io/moustache
 
-
-Landing page: https://carcmedev.github.io/moustache
-
-Download the app: https://play.google.com/store/apps/details?id=me.carc.moustache
-
-Other stuff: https://carcmedev.github.io/
+#Download the app:
+  https://play.google.com/store/apps/details?id=me.carc.moustache
